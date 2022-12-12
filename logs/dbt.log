@@ -1,0 +1,8 @@
+
+
+============================== 2022-12-09 12:22:41.100437 | de0dadce-4ed5-4874-8f02-7769a767c329 ==============================
+[0m12:22:41.100474 [info ] [MainThread]: Running with dbt=1.3.1
+[0m12:22:41.102805 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/rafael/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'project_name': 'google_ga', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m12:22:41.104931 [debug] [MainThread]: Tracking: tracking
+[0m12:22:41.107970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c219a3af0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c219a2080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6c219a3670>]}
+[0m12:22:41.113750 [debug] [MainThread]: Starter project path: /home/rafael/.local/lib/python3.10/site-packages/dbt/include/starter_project
