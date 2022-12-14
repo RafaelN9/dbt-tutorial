@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Has one unique customer per row
+    columns: 
+      - name: customer_id
+        desription: Is the primary key for stg_customers
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        description: Is the first name of the customer
+        tests:
+          - not_null
+      - name: last_name
+        description: Stores the initials of the customer's last name
+        tests:
+          - not_null
+
+  - name: stg_orders
+    description: Has one unique order per row
+    columns: 
+      - name: order_id
+        description: Is the primary key for stg_orders
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Represents the foreign key for customers
+        tests:
+          - not_null
+      - name: status
+        description: '{{ doc("order_status") }}'
+        tests:
+          - accepted_values:
+              values: ['shipped', 'completed', 'returned', 'return_pending', 'placed']

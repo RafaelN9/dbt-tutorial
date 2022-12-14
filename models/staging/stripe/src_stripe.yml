@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: dbt-learning-371413
+    tables:
+      - name: payments
+        description: Stores the payment info
+        columns:
+          - name: id
+            description: The primary key for payments
+            tests:
+              - unique
+              - not_null
+          - name: orderid
+            description: The foreign key for orders
+          - name: status
+            description: The payments status
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['failure', 'success', 'pending']
